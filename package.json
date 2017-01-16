@@ -1,0 +1,31 @@
+{
+  "name": "mfdc-animate",
+  "version": "0.0.0",
+  "description": "Stock animations for Angular",
+  "main": "mfdc-animate.js",
+  "dependencies": {
+    "angular": "^1.5.5",
+    "angular-animate": "^1.6.1"
+  },
+  "devDependencies": {
+    "bootstrap": "^3.3.6",
+    "express": "^4.13.4",
+    "font-awesome": "^4.6.1",
+    "jquery": "^2.2.3",
+    "lodash": "^4.11.2"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/MomsFriendlyDevCo/mfdc-animate.git"
+  },
+  "keywords": [
+    "angular",
+    "animation"
+  ],
+  "author": "Matt Carter <m@ttcarter.com>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/MomsFriendlyDevCo/mfdc-animate/issues"
+  },
+  "homepage": "https://github.com/MomsFriendlyDevCo/mfdc-animate#readme"
+}

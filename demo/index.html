@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>MFDC-Animate</title>
+	<meta http-equiv="Content-Language" content="en"/>
+	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"/>
+	<meta name="google" value="notranslate"/>
+	<meta name="apple-mobile-web-app-capable" content="yes"/>
+	<meta name="apple-mobile-web-app-status-bar-style" content="yes"/>
+	<meta name="viewport" content="user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimal-ui"/>
+
+	<!-- jQuery -->
+	<script src="/node_modules/jquery/dist/jquery.min.js"></script>
+
+	<!-- Bootstrap -->
+	<link href="/node_modules/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet" type="text/css"/>
+	<script src="/node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
+
+	<!-- Font-awesome -->
+	<link href="/node_modules/font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css"/>
+
+	<!-- lodash -->
+	<script src="/node_modules/lodash/lodash.min.js"></script>
+
+	<!-- Angular -->
+	<script src="/node_modules/angular/angular.min.js"></script>
+	<script src="/node_modules/angular-animate/angular-animate.min.js"></script>
+
+	<!-- Demo setup -->
+	<link href="/mfdc-animate.css" rel="stylesheet" type="text/css"/>
+	<script src="/js/app.js"></script>
+</head>
+<body ng-app="app">
+	<div ng-controller="animateExampleController" class="container">
+		<table class="table table-bordered table-striped">
+			<thead>
+				<tr>
+					<th>Animation</th>
+					<th width="200px">ng-show</th>
+					<th width="200px">ng-if</th>
+					<th width="200px">ng-repeat</th>
+				</tr>
+			</thead>
+			<tbody>
+				<tr ng-repeat="animation in animations track by animation.id">
+					<td><code>{{animation.class}}</code></td>
+					<td>
+						<a ng-show="showMode!=0" class="btn btn-default" ng-class="animation.class">Foo</a>
+						<a ng-show="showMode!=1" class="btn btn-default" ng-class="animation.class">Bar</a>
+						<a ng-show="showMode!=2" class="btn btn-default" ng-class="animation.class">Baz</a>
+					</td>
+					<td>
+						<a ng-if="showMode!=0" class="btn btn-default" ng-class="animation.class">Foo</a>
+						<a ng-if="showMode!=1" class="btn btn-default" ng-class="animation.class">Bar</a>
+						<a ng-if="showMode!=2" class="btn btn-default" ng-class="animation.class">Baz</a>
+					</td>
+					<td>
+						<ul class="list-group" style="height: 210px; overflow: hidden">
+							<li ng-repeat="item in repeatItems track by item.id" class="list-group-item" ng-class="animation.class">{{item.text}}</li>
+						</ul>
+					</td>
+				</tr>
+			</tbody>
+		</table>
+	</div>
+</body>
