@@ -30,8 +30,6 @@ body.router-routing .animate {
 .animate.animate-easing-ease-in { animation-timing-function: ease-in }
 .animate.animate-easing-ease-out { animation-timing-function: ease-out }
 .animate.animate-easing-ease-in-out { animation-timing-function: ease-in-out }
-.animate.animate-easing-step-start { animation-timing-function: step-start }
-.animate.animate-easing-step-end { animation-timing-function: step-end }
 /* }}} */
 
 /* .animate-fade {{{ */

@@ -117,8 +117,6 @@ angular.module('app', [
 					{class: 'animate-easing-ease-in'},
 					{class: 'animate-easing-ease-out'},
 					{class: 'animate-easing-ease-in-out'},
-					{class: 'animate-easing-step-start'},
-					{class: 'animate-easing-step-end'},
 				],
 			};
 			$ctrl.selected = {
