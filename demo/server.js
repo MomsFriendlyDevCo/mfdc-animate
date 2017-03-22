@@ -18,6 +18,7 @@ var root = __dirname + '/..';
 var express = require('express');
 var app = express();
 app.use('/node_modules', express.static(root + '/node_modules'));
+app.use('/views', express.static(root + '/demo/views'));
 
 app.get('/', function(req, res) {
 	res.sendFile('index.html', {root: __dirname});

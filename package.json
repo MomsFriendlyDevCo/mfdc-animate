@@ -12,7 +12,8 @@
     "express": "^4.13.4",
     "font-awesome": "^4.6.1",
     "jquery": "^2.2.3",
-    "lodash": "^4.11.2"
+    "lodash": "^4.11.2",
+    "mfdc-router": "^0.0.3"
   },
   "repository": {
     "type": "git",

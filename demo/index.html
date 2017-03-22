@@ -27,41 +27,21 @@
 	<script src="/node_modules/angular/angular.min.js"></script>
 	<script src="/node_modules/angular-animate/angular-animate.min.js"></script>
 
+	<!-- Router -->
+	<script src="/node_modules/mfdc-router/dist/angular-mfdc-router.min.js"></script>
+
 	<!-- Demo setup -->
 	<link href="/mfdc-animation.css" rel="stylesheet" type="text/css"/>
 	<script src="/js/app.js"></script>
 </head>
-<body ng-app="app">
-	<div ng-controller="animateExampleController" class="container">
-		<table class="table table-bordered table-striped">
-			<thead>
-				<tr>
-					<th>Animation</th>
-					<th width="200px">ng-show</th>
-					<th width="200px">ng-if</th>
-					<th width="200px">ng-repeat</th>
-				</tr>
-			</thead>
-			<tbody>
-				<tr ng-repeat="animation in animations track by animation.id">
-					<td><code>{{animation.class}}</code></td>
-					<td>
-						<a ng-show="showMode!=0" class="btn btn-default" ng-class="animation.class">Foo</a>
-						<a ng-show="showMode!=1" class="btn btn-default" ng-class="animation.class">Bar</a>
-						<a ng-show="showMode!=2" class="btn btn-default" ng-class="animation.class">Baz</a>
-					</td>
-					<td>
-						<a ng-if="showMode!=0" class="btn btn-default" ng-class="animation.class">Foo</a>
-						<a ng-if="showMode!=1" class="btn btn-default" ng-class="animation.class">Bar</a>
-						<a ng-if="showMode!=2" class="btn btn-default" ng-class="animation.class">Baz</a>
-					</td>
-					<td>
-						<ul class="list-group" style="height: 210px; overflow: hidden">
-							<li ng-repeat="item in repeatItems track by item.id" class="list-group-item" ng-class="animation.class">{{item.text}}</li>
-						</ul>
-					</td>
-				</tr>
-			</tbody>
-		</table>
+<body ng-app="app" ng-controller="GlobalCtrl as $global">
+	<div class="container" style="padding-top: 20px">
+		<ul class="nav nav-tabs" id="demoTabs">
+			<li ng-class="$global.$router.path=='/' && 'active'"><a href="#/">Dashboard</a></li>
+			<li ng-class="$global.$router.path=='/all' && 'active'"><a href="#/all">All Animations</a></li>
+		</ul>
+		<div class="tab-content" style="margin-top: 20px">
+			<router-view></router-view>
+		</div>
 	</div>
 </body>

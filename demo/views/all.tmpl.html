@@ -1,0 +1,32 @@
+<div class="container">
+	<table class="table table-bordered table-striped">
+		<thead>
+			<tr>
+				<th>Animation</th>
+				<th width="200px">ng-show</th>
+				<th width="200px">ng-if</th>
+				<th width="200px">ng-repeat</th>
+			</tr>
+		</thead>
+		<tbody>
+			<tr ng-repeat="animation in animations track by animation.id">
+				<td><code>{{animation.class}}</code></td>
+				<td>
+					<a ng-show="showMode!=0" class="btn btn-default" ng-class="animation.class">Foo</a>
+					<a ng-show="showMode!=1" class="btn btn-default" ng-class="animation.class">Bar</a>
+					<a ng-show="showMode!=2" class="btn btn-default" ng-class="animation.class">Baz</a>
+				</td>
+				<td>
+					<a ng-if="showMode!=0" class="btn btn-default" ng-class="animation.class">Foo</a>
+					<a ng-if="showMode!=1" class="btn btn-default" ng-class="animation.class">Bar</a>
+					<a ng-if="showMode!=2" class="btn btn-default" ng-class="animation.class">Baz</a>
+				</td>
+				<td>
+					<ul class="list-group" style="height: 210px; overflow: hidden">
+						<li ng-repeat="item in repeatItems track by item.id" class="list-group-item" ng-class="animation.class">{{item.text}}</li>
+					</ul>
+				</td>
+			</tr>
+		</tbody>
+	</table>
+</div>
