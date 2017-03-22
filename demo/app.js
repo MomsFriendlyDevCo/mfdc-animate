@@ -78,3 +78,80 @@ angular.module('app', [
 		},
 	})
 	// }}}
+	// Path: /mixer {{{
+	.run($router => $router.when('/mixer').component('demoMixer'))
+	.component('demoMixer', {
+		templateUrl: '/views/mixer.tmpl.html',
+		controller: function($interval, $scope) {
+			var $ctrl = this;
+
+			$ctrl.animations = {
+				primary: [
+					{class: ''},
+					{class: 'animate-fade'},
+				],
+				reflow: [
+					{class: ''},
+					{class: 'animate-reflow-width'},
+					{class: 'animate-reflow-height'},
+					{class: 'animate-reflow-scale'},
+				],
+				duration: [
+					{class: ''},
+					{class: 'animate-duration-100ms'},
+					{class: 'animate-duration-200ms'},
+					{class: 'animate-duration-500ms'},
+					{class: 'animate-duration-1s'},
+					{class: 'animate-duration-2s'},
+					{class: 'animate-duration-5s'},
+					{class: 'animate-duration-10s'},
+					{class: 'animate-duration-20s'},
+					{class: 'animate-duration-30s'},
+				],
+				easing: [
+					{class: ''},
+					{class: 'animate-easing-linear'},
+					{class: 'animate-easing-ease'},
+					{class: 'animate-easing-ease-in'},
+					{class: 'animate-easing-ease-out'},
+					{class: 'animate-easing-ease-in-out'},
+					{class: 'animate-easing-step-start'},
+					{class: 'animate-easing-step-end'},
+				],
+			};
+			$ctrl.selected = {
+				class: '',
+				primary: '',
+				reflow: 'animate-reflow-scale',
+				duration: '',
+				easing: '',
+			};
+			$scope.$watch('$ctrl.selected', ()=> {
+				$ctrl.selected.class = [
+					'animate',
+					$ctrl.selected.primary,
+					$ctrl.selected.reflow,
+					$ctrl.selected.duration,
+					$ctrl.selected.easing,
+				]
+					.filter(i => !!i)
+					.join(' ')
+			}, true);
+
+			$ctrl.repeatItems = [];
+			$ctrl.showMode = 0;
+			$interval(function() {
+				$ctrl.repeatItems = [
+					{id: 'foo', text: '1. Foo!'},
+					{id: 'bar', text: '2. Bar!'},
+					{id: 'baz', text: '3. Baz!'},
+					{id: 'quz', text: '4. Quz!'},
+					{id: 'flarp', text: '5. Flarp!'},
+				]
+					.filter(i => _.random(0, 10) >= 3);
+
+				if (++$ctrl.showMode >= 3) $ctrl.showMode = 0;
+			}, 2000);
+		},
+	})
+	// }}}

@@ -20,7 +20,18 @@ body.router-routing .animate {
 .animate.animate-duration-1s { animation-duration: 1s }
 .animate.animate-duration-2s { animation-duration: 2s }
 .animate.animate-duration-5s { animation-duration: 5s }
+.animate.animate-duration-10s { animation-duration: 10s }
+.animate.animate-duration-20s { animation-duration: 20s }
 .animate.animate-duration-30s { animation-duration: 30s }
+/* }}} */
+/* .animate-easing-* - easings {{{ */
+.animate.animate-easing-linear { animation-timing-function: linear }
+.animate.animate-easing-ease { animation-timing-function: ease }
+.animate.animate-easing-ease-in { animation-timing-function: ease-in }
+.animate.animate-easing-ease-out { animation-timing-function: ease-out }
+.animate.animate-easing-ease-in-out { animation-timing-function: ease-in-out }
+.animate.animate-easing-step-start { animation-timing-function: step-start }
+.animate.animate-easing-step-end { animation-timing-function: step-end }
 /* }}} */
 
 /* .animate-fade {{{ */
