@@ -28,11 +28,13 @@ angular.module('app', [
 	.run($router => $router.when('/all').component('demoAll'))
 	.component('demoAll', {
 		templateUrl: '/views/all.tmpl.html',
-		controller: function($scope, $interval) {
-			$scope.repeatItems = [];
-			$scope.showMode = 0;
+		controller: function($interval) {
+			var $ctrl = this;
 
-			$scope.animations = [
+			$ctrl.repeatItems = [];
+			$ctrl.showMode = 0;
+
+			$ctrl.animations = [
 				{
 					id: 'fade',
 					class: 'animate animate-fade',
@@ -64,7 +66,7 @@ angular.module('app', [
 			];
 
 			$interval(function() {
-				$scope.repeatItems = [
+				$ctrl.repeatItems = [
 					{id: 'foo', text: '1. Foo!'},
 					{id: 'bar', text: '2. Bar!'},
 					{id: 'baz', text: '3. Baz!'},
@@ -73,7 +75,7 @@ angular.module('app', [
 				]
 					.filter(i => _.random(0, 10) >= 3);
 
-				if (++$scope.showMode >= 3) $scope.showMode = 0;
+				if (++$ctrl.showMode >= 3) $ctrl.showMode = 0;
 			}, 2000);
 		},
 	})
