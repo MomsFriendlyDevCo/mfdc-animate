@@ -1,0 +1,151 @@
+/* Prevent any hide animations when the page is still loading {{{ */
+/* This is an insane fix and I honestly can't believe its still an issue in angular-animate 1.5.x *
+/* See - http://stackoverflow.com/questions/15839479/nganimate-on-ngshow-preventing-animation-when-it-starts-first-time#25562457 */
+body.router-routing .animate {
+	animation-duration: 0s !important;
+}
+/* }}} */
+
+/* .animate - base animation class {{{ */
+.animate {
+	animation-timing-function: ease-out;
+	animation-duration: 0.5s;
+}
+/* }}} */
+
+/* .animate-*s - durations {{{ */
+.animate.animate-duration-100ms { animation-duration: 0.1s }
+.animate.animate-duration-200ms { animation-duration: 0.2s }
+.animate.animate-duration-500ms { animation-duration: 0.5s }
+.animate.animate-duration-1s { animation-duration: 1s }
+.animate.animate-duration-2s { animation-duration: 2s }
+.animate.animate-duration-5s { animation-duration: 5s }
+.animate.animate-duration-30s { animation-duration: 30s }
+/* }}} */
+
+/* .animate-fade {{{ */
+@keyframes animate-fade-in {
+	from { opacity: 0 }
+	to { opacity: 1 }
+}
+@keyframes animate-fade-out {
+	from { opacity: 1 }
+	to { opacity: 0 }
+}
+
+.animate.animate-fade.ng-hide-add-active,
+.animate.animate-fade.ng-enter-active,
+{animation-name: animate-fade-in}
+
+.animate.animate-fade.ng-hide-remove-active,
+.animate.animate-fade.ng-leave-active
+{animation-name: animate-fade-out}
+/* }}} */
+/* .animate-reflow-width {{{ */
+@keyframes animate-reflow-width-in {
+	from {
+		max-width: 0px;
+		margin-left: 0;
+		margin-right: 0;
+		padding-left: 0;
+		padding-right: 0;
+	}
+	to {
+		max-width: 300px;
+	}
+}
+@keyframes animate-reflow-width-out {
+	from {
+		max-width: 300px;
+	}
+	to {
+		max-width: 0px;
+		margin-left: 0;
+		margin-right: 0;
+		padding-left: 0;
+		padding-right: 0;
+	}
+}
+
+.animate.animate-reflow-width {overflow-x: hidden}
+
+.animate.animate-reflow-width.ng-hide-remove,
+.animate.animate-reflow-width.ng-enter
+{animation-name: animate-reflow-width-in}
+
+.animate.animate-reflow-width.ng-hide-add,
+.animate.animate-reflow-width.ng-leave-active
+{animation-name: animate-reflow-width-out}
+/* }}} */
+/* .animate-reflow-height {{{ */
+@keyframes animate-reflow-height-in {
+	from {
+		max-height: 0px;
+		margin-top: 0;
+		margin-bottom: 0;
+		padding-top: 0;
+		padding-bottom: 0;
+	}
+	to {
+		max-height: 300px;
+	}
+}
+@keyframes animate-reflow-height-out {
+	from {
+		max-height: 300px;
+	}
+	to {
+		max-height: 0px;
+		margin-top: 0;
+		margin-bottom: 0;
+		padding-top: 0;
+		padding-bottom: 0;
+	}
+}
+
+.animate.animate-reflow-height {overflow-y: hidden}
+
+.animate.animate-reflow-height.ng-hide-remove,
+.animate.animate-reflow-height.ng-enter
+{animation-name: animate-reflow-height-in}
+
+.animate.animate-reflow-height.ng-hide-add,
+.animate.animate-reflow-height.ng-leave-active
+{animation-name: animate-reflow-height-out}
+/* }}} */
+/* .animate-reflow-scale {{{ */
+@keyframes animate-reflow-scale-in {
+	from {
+		transform: scale(0);
+		max-width: 0px;
+		max-height: 0px;
+		margin: 0;
+	}
+	to {
+		transform: scale(1);
+		max-width: 300px;
+		max-height: 300px;
+	}
+}
+@keyframes animate-reflow-scale-out {
+	from {
+		transform: scale(1);
+		max-width: 300px;
+		max-height: 300px;
+	}
+	to {
+		transform: scale(0);
+		max-width: 0px;
+		max-height: 0px;
+		margin: 0;
+	}
+}
+
+.animate.animate-reflow-scale.ng-hide-remove,
+.animate.animate-reflow-scale.ng-enter
+{animation-name: animate-reflow-scale-in}
+
+.animate.animate-reflow-scale.ng-hide-add,
+.animate.animate-reflow-scale.ng-leave-active
+{animation-name: animate-reflow-scale-out}
+/* }}} */

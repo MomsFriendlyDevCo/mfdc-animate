@@ -12,20 +12,28 @@ app.controller('animateExampleController', function($scope, $interval) {
 			class: 'animate animate-fade',
 		},
 		{
-			id: 'fold',
-			class: 'animate animate-fold',
+			id: 'reflowWidth',
+			class: 'animate animate-reflow-width',
 		},
 		{
-			id: 'pop',
-			class: 'animate animate-pop',
+			id: 'reflowHeight',
+			class: 'animate animate-reflow-height',
 		},
 		{
-			id: 'scale',
-			class: 'animate animate-scale',
+			id: 'reflowScale',
+			class: 'animate animate-reflow-scale',
 		},
 		{
-			id: 'scaleZ',
-			class: 'animate animate-fade animate-fold-y',
+			id: 'fadeReflowWidth',
+			class: 'animate animate-fade animate-reflow-width',
+		},
+		{
+			id: 'fadeReflowHeight',
+			class: 'animate animate-fade animate-reflow-height',
+		},
+		{
+			id: 'fadeReflowScale',
+			class: 'animate animate-fade animate-reflow-scale',
 		},
 	];
 

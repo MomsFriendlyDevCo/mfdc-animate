@@ -27,16 +27,8 @@ app.get('/js/app.js', function(req, res) {
 	res.sendFile('app.js', {root: root + '/demo'});
 });
 
-app.get('/mfdc-animate.css', function(req, res) {
-	res.sendFile('mfdc-animate.css', {root: root});
-});
-
-app.get('/js/deep-diff.js', function(req, res) {
-	res.sendFile('index.js', {root: root + '/node_modules/deep-diff'});
-});
-
-app.get('/js/undobuffer-worker.js', function(req, res) {
-	res.sendFile('undobuffer-worker.js', {root: root});
+app.get('/mfdc-animation.css', function(req, res) {
+	res.sendFile('mfdc-animation.css', {root: root});
 });
 
 app.use(function(err, req, res, next){
@@ -44,7 +36,7 @@ app.use(function(err, req, res, next){
 	res.send(500, 'Something broke!').end();
 });
 
-var port = process.env.PORT || process.env.VMC_APP_PORT || 80;
+var port = process.env.PORT || process.env.VMC_APP_PORT || 8080;
 var server = app.listen(port, function() {
 	console.log('Web interface listening on port', port);
 });
