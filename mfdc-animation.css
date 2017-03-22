@@ -138,3 +138,28 @@ body.router-routing .animate {
 	animation-direction: reverse;
 }
 /* }}} */
+
+/* Combinational {{{ */
+/* CSS doesn't support multiple animations on the same element so we need to work out each primary + reflow combination here */
+/* .animate-fade + .animate-reflow-width {{{ */
+.animate.animate-fade.animate-reflow-width.ng-hide-remove,
+.animate.animate-fade.animate-reflow-width.ng-enter,
+.animate.animate-fade.animate-reflow-width.ng-hide-add,
+.animate.animate-fade.animate-reflow-width.ng-leave-active
+{animation-name: animate-fade, animate-reflow-width}
+/* }}} */
+/* .animate-fade + .animate-reflow-height {{{ */
+.animate.animate-fade.animate-reflow-height.ng-hide-remove,
+.animate.animate-fade.animate-reflow-height.ng-enter,
+.animate.animate-fade.animate-reflow-height.ng-hide-add,
+.animate.animate-fade.animate-reflow-height.ng-leave-active
+{animation-name: animate-fade, animate-reflow-height}
+/* }}} */
+/* .animate-fade + .animate-reflow-scale {{{ */
+.animate.animate-fade.animate-reflow-scale.ng-hide-remove,
+.animate.animate-fade.animate-reflow-scale.ng-enter,
+.animate.animate-fade.animate-reflow-scale.ng-hide-add,
+.animate.animate-fade.animate-reflow-scale.ng-leave-active
+{animation-name: animate-fade, animate-reflow-scale}
+/* }}} */
+/* }}} */

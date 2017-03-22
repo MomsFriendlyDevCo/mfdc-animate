@@ -121,7 +121,7 @@ angular.module('app', [
 			};
 			$ctrl.selected = {
 				class: '',
-				primary: '',
+				primary: 'animate-fade',
 				reflow: 'animate-reflow-scale',
 				duration: '',
 				easing: '',
