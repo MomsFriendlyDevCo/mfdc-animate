@@ -1,5 +1,5 @@
 {
-  "name": "@momsfriendlydevco/mfdc-animate",
+  "name": "@momsfriendlydevco/animate",
   "version": "0.0.0",
   "description": "Stock animations for Angular",
   "main": "mfdc-animate.js",
@@ -19,6 +19,7 @@
     "type": "git",
     "url": "git+https://github.com/MomsFriendlyDevCo/mfdc-animate.git"
   },
+  "public": true,
   "keywords": [
     "angular",
     "animation"
