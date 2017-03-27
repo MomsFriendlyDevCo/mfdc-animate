@@ -28,8 +28,8 @@ app.get('/js/app.js', function(req, res) {
 	res.sendFile('app.js', {root: root + '/demo'});
 });
 
-app.get('/mfdc-animation.css', function(req, res) {
-	res.sendFile('mfdc-animation.css', {root: root});
+app.get('/animate.css', function(req, res) {
+	res.sendFile('src/animate.css', {root: root});
 });
 
 app.use(function(err, req, res, next){
