@@ -2,7 +2,7 @@
   "name": "@momsfriendlydevco/animate",
   "version": "0.0.0",
   "description": "Stock animations for Angular",
-  "main": "mfdc-animate.js",
+  "main": "dist/animate.css",
   "dependencies": {
     "angular": "^1.5.5",
     "angular-animate": "^1.6.1"
@@ -11,6 +11,9 @@
     "bootstrap": "^3.3.6",
     "express": "^4.13.4",
     "font-awesome": "^4.6.1",
+    "gulp": "^3.9.1",
+    "gulp-clean-css": "^3.0.4",
+    "gulp-concat": "^2.6.1",
     "jquery": "^2.2.3",
     "lodash": "^4.11.2",
     "mfdc-router": "^0.0.3"
