@@ -91,6 +91,10 @@ angular.module('app', [
 				primary: [
 					{class: ''},
 					{class: 'animate-fade'},
+					{class: 'animate-fly-up'},
+					{class: 'animate-fly-down'},
+					{class: 'animate-fly-left'},
+					{class: 'animate-fly-right'},
 				],
 				reflow: [
 					{class: ''},

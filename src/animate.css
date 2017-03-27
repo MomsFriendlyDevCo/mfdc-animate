@@ -51,6 +51,102 @@ body.router-routing .animate {
 	animation-direction: reverse;
 }
 /* }}} */
+/* .animate-fly-up {{{ */
+@keyframes animate-fly-up {
+	from {
+		opacity: 0;
+		transform: translateY(2em);
+	}
+	to {
+		transform: translateY(0);
+	}
+}
+
+.animate.animate-fly-up.ng-hide-remove,
+.animate.animate-fly-up.ng-enter
+{
+	animation-name: animate-fly-up;
+}
+
+.animate.animate-fly-up.ng-hide-add,
+.animate.animate-fly-up.ng-leave-active
+{
+	animation-name: animate-fly-up;
+	animation-direction: reverse;
+}
+/* }}} */
+/* .animate-fly-down {{{ */
+@keyframes animate-fly-down {
+	from {
+		transform: translateY(-2em);
+		opacity: 0;
+	}
+	to {
+		transform: translateY(0);
+	}
+}
+
+.animate.animate-fly-down.ng-hide-remove,
+.animate.animate-fly-down.ng-enter
+{
+	animation-name: animate-fly-down;
+}
+
+.animate.animate-fly-down.ng-hide-add,
+.animate.animate-fly-down.ng-leave-active
+{
+	animation-name: animate-fly-down;
+	animation-direction: reverse;
+}
+/* }}} */
+/* .animate-fly-left {{{ */
+@keyframes animate-fly-left {
+	from {
+		transform: translateX(-2em);
+		opacity: 0;
+	}
+	to {
+		transform: translateX(0);
+	}
+}
+
+.animate.animate-fly-left.ng-hide-remove,
+.animate.animate-fly-left.ng-enter
+{
+	animation-name: animate-fly-left;
+}
+
+.animate.animate-fly-left.ng-hide-add,
+.animate.animate-fly-left.ng-leave-active
+{
+	animation-name: animate-fly-left;
+	animation-direction: reverse;
+}
+/* }}} */
+/* .animate-fly-right {{{ */
+@keyframes animate-fly-right {
+	from {
+		transform: translateX(2em);
+		opacity: 0;
+	}
+	to {
+		transform: translateX(0);
+	}
+}
+
+.animate.animate-fly-right.ng-hide-remove,
+.animate.animate-fly-right.ng-enter
+{
+	animation-name: animate-fly-right;
+}
+
+.animate.animate-fly-right.ng-hide-add,
+.animate.animate-fly-right.ng-leave-active
+{
+	animation-name: animate-fly-right;
+	animation-direction: reverse;
+}
+/* }}} */
 
 /* .animate-reflow-width {{{ */
 @keyframes animate-reflow-width {
@@ -161,5 +257,73 @@ body.router-routing .animate {
 .animate.animate-fade.animate-reflow-scale.ng-hide-add,
 .animate.animate-fade.animate-reflow-scale.ng-leave-active
 {animation-name: animate-fade, animate-reflow-scale}
+/* }}} */
+/* .animate-fly-up + .animate-reflow-width {{{ */
+.animate.animate-fly-up.animate-reflow-width.ng-hide-remove,
+.animate.animate-fly-up.animate-reflow-width.ng-enter,
+.animate.animate-fly-up.animate-reflow-width.ng-hide-add,
+.animate.animate-fly-up.animate-reflow-width.ng-leave-active
+{animation-name: animate-fly-up, animate-reflow-width}
+/* }}} */
+/* .animate-fly-up + .animate-reflow-height {{{ */
+.animate.animate-fly-up.animate-reflow-height.ng-hide-remove,
+.animate.animate-fly-up.animate-reflow-height.ng-enter,
+.animate.animate-fly-up.animate-reflow-height.ng-hide-add,
+.animate.animate-fly-up.animate-reflow-height.ng-leave-active
+{animation-name: animate-fly-up, animate-reflow-height}
+/* }}} */
+/* .animate-fly-up + .animate-reflow-scale {{{ */
+/* CONFLICT - Cannot scale + fly in at same time */
+/* }}} */
+/* .animate-fly-down + .animate-reflow-width {{{ */
+.animate.animate-fly-down.animate-reflow-width.ng-hide-remove,
+.animate.animate-fly-down.animate-reflow-width.ng-enter,
+.animate.animate-fly-down.animate-reflow-width.ng-hide-add,
+.animate.animate-fly-down.animate-reflow-width.ng-leave-active
+{animation-name: animate-fly-down, animate-reflow-width}
+/* }}} */
+/* .animate-fly-down + .animate-reflow-height {{{ */
+.animate.animate-fly-down.animate-reflow-height.ng-hide-remove,
+.animate.animate-fly-down.animate-reflow-height.ng-enter,
+.animate.animate-fly-down.animate-reflow-height.ng-hide-add,
+.animate.animate-fly-down.animate-reflow-height.ng-leave-active
+{animation-name: animate-fly-down, animate-reflow-height}
+/* }}} */
+/* .animate-fly-down + .animate-reflow-scale {{{ */
+/* CONFLICT - Cannot scale + fly in at same time */
+/* }}} */
+/* .animate-fly-left + .animate-reflow-width {{{ */
+.animate.animate-fly-left.animate-reflow-width.ng-hide-remove,
+.animate.animate-fly-left.animate-reflow-width.ng-enter,
+.animate.animate-fly-left.animate-reflow-width.ng-hide-add,
+.animate.animate-fly-left.animate-reflow-width.ng-leave-active
+{animation-name: animate-fly-left, animate-reflow-width}
+/* }}} */
+/* .animate-fly-left + .animate-reflow-height {{{ */
+.animate.animate-fly-left.animate-reflow-height.ng-hide-remove,
+.animate.animate-fly-left.animate-reflow-height.ng-enter,
+.animate.animate-fly-left.animate-reflow-height.ng-hide-add,
+.animate.animate-fly-left.animate-reflow-height.ng-leave-active
+{animation-name: animate-fly-left, animate-reflow-height}
+/* }}} */
+/* .animate-fly-left + .animate-reflow-scale {{{ */
+/* CONFLICT - Cannot scale + fly in at same time */
+/* }}} */
+/* .animate-fly-right + .animate-reflow-width {{{ */
+.animate.animate-fly-right.animate-reflow-width.ng-hide-remove,
+.animate.animate-fly-right.animate-reflow-width.ng-enter,
+.animate.animate-fly-right.animate-reflow-width.ng-hide-add,
+.animate.animate-fly-right.animate-reflow-width.ng-leave-active
+{animation-name: animate-fly-right, animate-reflow-width}
+/* }}} */
+/* .animate-fly-right + .animate-reflow-height {{{ */
+.animate.animate-fly-right.animate-reflow-height.ng-hide-remove,
+.animate.animate-fly-right.animate-reflow-height.ng-enter,
+.animate.animate-fly-right.animate-reflow-height.ng-hide-add,
+.animate.animate-fly-right.animate-reflow-height.ng-leave-active
+{animation-name: animate-fly-right, animate-reflow-height}
+/* }}} */
+/* .animate-fly-right + .animate-reflow-scale {{{ */
+/* CONFLICT - Cannot scale + fly in at same time */
 /* }}} */
 /* }}} */
