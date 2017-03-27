@@ -26,6 +26,7 @@ This library is intended to be separated into atomic CSS components. To use comb
 |---------------------|-------------------------|--------------------------------------------------------------------------------------------------------------------|
 | Base                | `animate`               | The base animation class. This must be present on any item that will animate                                       |
 | Primary Effect      | `animate-fade`          | Apply a simple fade in / out effect                                                                                |
+|                     | `animate-fly-DIRECTION` | Apply a fade-in and fly-in effect from the specified direction. Direction can be: `up`, `down`, `left`, `right`    |
 | Reflow              | `animate-reflow-width`  | Resize the elements width while animating                                                                          |
 |                     | `animate-reflow-height` | Resize the elements height while animating. This is ideal for vertical lists or use within tables                  |
 |                     | `animate-reflow-scale`  | Scale the entire element while animating. This class is recommended for reflow as it is GPU accelerated            |
