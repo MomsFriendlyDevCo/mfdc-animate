@@ -100,7 +100,15 @@ angular.module('app', [
 					{class: ''},
 					{class: 'animate-reflow-width'},
 					{class: 'animate-reflow-height'},
-					{class: 'animate-reflow-scale'},
+					{
+						class: 'animate-reflow-scale',
+						conflicts: [
+							{primary: 'animate-fly-up'},
+							{primary: 'animate-fly-down'},
+							{primary: 'animate-fly-left'},
+							{primary: 'animate-fly-right'},
+						],
+					},
 				],
 				duration: [
 					{class: ''},
@@ -123,10 +131,38 @@ angular.module('app', [
 					{class: 'animate-easing-ease-in-out'},
 				],
 			};
+
+			// Deal with conflicts {{{
+			/**
+			* List of all conflicts found
+			* Each value will either be boolean false or an array of all classes that conflict
+			*/
+			$ctrl.conflicts = {
+				reflow: false,
+			};
+
+			$scope.$watch('$ctrl.selected', ()=> {
+				var reflowSelected = $ctrl.animations.reflow.find(i => i.class == $ctrl.selected.reflow);
+				if (!reflowSelected.conflicts) {
+					$ctrl.conflicts.reflow = false;
+					return;
+				}
+
+				var conflictWith = reflowSelected.conflicts.find(conflictTest => _.isMatch($ctrl.selected, conflictTest));
+				if (conflictWith) {
+					$ctrl.conflicts.reflow = _.values(conflictWith);
+				} else {
+					$ctrl.conflicts.reflow = false;
+				}
+			}, true);
+			// }}}
+
+			// Deal with selection {{{
 			$ctrl.selected = {
 				class: '',
 				primary: 'animate-fade',
 				reflow: 'animate-reflow-scale',
+				reflowConflicts: false,
 				duration: '',
 				easing: '',
 			};
@@ -141,6 +177,7 @@ angular.module('app', [
 					.filter(i => !!i)
 					.join(' ')
 			}, true);
+			// }}}
 
 			$ctrl.repeatItems = [];
 			$ctrl.showMode = 0;

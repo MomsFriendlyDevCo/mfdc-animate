@@ -17,6 +17,11 @@
 							<select ng-model="$ctrl.selected.reflow" class="form-control">
 								<option ng-repeat="animation in $ctrl.animations.reflow track by animation.class" value="{{animation.class}}">{{animation.class}}</option>
 							</select>
+							<div ng-show="$ctrl.conflicts.reflow" class="help-block alert alert-warning">
+								<i class="fa fa-exclamation-triangle"></i>
+								This reflow conflicts with
+								<span ng-repeat="conflict in $ctrl.conflicts.reflow" class="badge badge-warning">{{conflict}}</span>
+							</div>
 						</div>
 					</div>
 					<div class="form-group">
