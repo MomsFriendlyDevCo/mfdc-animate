@@ -1,5 +1,5 @@
 {
-  "name": "mfdc-animate",
+  "name": "@momsfriendlydevco/mfdc-animate",
   "version": "0.0.0",
   "description": "Stock animations for Angular",
   "main": "mfdc-animate.js",
