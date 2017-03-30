@@ -1,0 +1,85 @@
+<div class="container">
+	<div class="row">
+		<div class="panel panel-primary">
+			<div class="panel-body">
+				<form class="form-horizontal">
+					<div class="form-group">
+						<label class="col-sm-3 control-label">Primary</label>
+						<div class="col-sm-9">
+							<select ng-model="$ctrl.selected.primary" class="form-control">
+								<option ng-repeat="animation in $ctrl.animations.primary track by animation.class" value="{{animation.class}}">{{animation.class}}</option>
+							</select>
+						</div>
+					</div>
+					<div class="form-group">
+						<label class="col-sm-3 control-label">Reflow</label>
+						<div class="col-sm-9">
+							<select ng-model="$ctrl.selected.reflow" class="form-control">
+								<option ng-repeat="animation in $ctrl.animations.reflow track by animation.class" value="{{animation.class}}">{{animation.class}}</option>
+							</select>
+							<div ng-show="$ctrl.conflicts.reflow" class="help-block alert alert-warning">
+								<i class="fa fa-exclamation-triangle"></i>
+								This reflow conflicts with
+								<span ng-repeat="conflict in $ctrl.conflicts.reflow" class="badge badge-warning">{{conflict}}</span>
+							</div>
+						</div>
+					</div>
+					<div class="form-group">
+						<label class="col-sm-3 control-label">Duration</label>
+						<div class="col-sm-9">
+							<select ng-model="$ctrl.selected.duration" class="form-control">
+								<option ng-repeat="animation in $ctrl.animations.duration track by animation.class" value="{{animation.class}}">{{animation.class}}</option>
+							</select>
+						</div>
+					</div>
+					<div class="form-group">
+						<label class="col-sm-3 control-label">Easing</label>
+						<div class="col-sm-9">
+							<select ng-model="$ctrl.selected.easing" class="form-control">
+								<option ng-repeat="animation in $ctrl.animations.easing track by animation.class" value="{{animation.class}}">{{animation.class}}</option>
+							</select>
+						</div>
+					</div>
+					<div class="form-group">
+						<label class="col-sm-3 control-label">HTML</label>
+						<div class="col-sm-9">
+							<pre>&lt;div class="{{$ctrl.selected.class}}"&gt;&lt;/div&gt;</pre>
+						</div>
+					</div>
+				</form>
+			</div>
+		</div>
+	</div>
+	<div class="row">
+		<div class="col-md-4">
+			<div class="panel panel-default">
+				<div class="panel-heading">ng-show</div>
+				<div class="panel-body">
+					<a ng-show="$ctrl.showMode!=0" class="btn btn-default" ng-class="$ctrl.selected.class">Foo</a>
+					<a ng-show="$ctrl.showMode!=1" class="btn btn-default" ng-class="$ctrl.selected.class">Bar</a>
+					<a ng-show="$ctrl.showMode!=2" class="btn btn-default" ng-class="$ctrl.selected.class">Baz</a>
+				</div>
+			</div>
+		</div>
+		<div class="col-md-4">
+			<div class="panel panel-default">
+				<div class="panel-heading">ng-if</div>
+				<div class="panel-body">
+					<a ng-if="$ctrl.showMode!=0" class="btn btn-default" ng-class="$ctrl.selected.class">Foo</a>
+					<a ng-if="$ctrl.showMode!=1" class="btn btn-default" ng-class="$ctrl.selected.class">Bar</a>
+					<a ng-if="$ctrl.showMode!=2" class="btn btn-default" ng-class="$ctrl.selected.class">Baz</a>
+				</div>
+			</div>
+		</div>
+		<div class="col-md-4">
+			<div class="panel panel-default">
+				<div class="panel-heading">ng-repeat</div>
+				<div class="panel-body">
+					<ul class="list-group" style="height: 210px; overflow: hidden">
+						<li ng-repeat="item in $ctrl.repeatItems track by item.id" class="list-group-item" ng-class="$ctrl.selected.class">{{item.text}}</li>
+					</ul>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
