@@ -24,11 +24,11 @@ app.get('/', function(req, res) {
 	res.sendFile('index.html', {root: __dirname});
 });
 
-app.get('/js/app.js', function(req, res) {
+app.get('/app.js', function(req, res) {
 	res.sendFile('app.js', {root: root + '/demo'});
 });
 
-app.get('/animate.css', function(req, res) {
+app.get('/dist/animate.css', function(req, res) {
 	res.sendFile('src/animate.css', {root: root});
 });
 

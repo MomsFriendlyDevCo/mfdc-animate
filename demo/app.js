@@ -21,13 +21,13 @@ angular.module('app', [
 	// Path: / {{{
 	.run($router => $router.when('/').component('demoDashboard'))
 	.component('demoDashboard', {
-		templateUrl: '/views/dashboard.tmpl.html',
+		templateUrl: 'views/dashboard.tmpl.html',
 	})
 	// }}}
 	// Path: /all {{{
 	.run($router => $router.when('/all').component('demoAll'))
 	.component('demoAll', {
-		templateUrl: '/views/all.tmpl.html',
+		templateUrl: 'views/all.tmpl.html',
 		controller: function($interval) {
 			var $ctrl = this;
 
@@ -83,7 +83,7 @@ angular.module('app', [
 	// Path: /mixer {{{
 	.run($router => $router.when('/mixer').component('demoMixer'))
 	.component('demoMixer', {
-		templateUrl: '/views/mixer.tmpl.html',
+		templateUrl: 'views/mixer.tmpl.html',
 		controller: function($interval, $scope) {
 			var $ctrl = this;
 

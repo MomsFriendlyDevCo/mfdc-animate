@@ -2,6 +2,8 @@ mfdc-animate
 ============
 Stock animations for Angular.
 
+[Demo](https://momsfriendlydevco.github.io/mfdc-animate).
+
 
 Installation
 ============
