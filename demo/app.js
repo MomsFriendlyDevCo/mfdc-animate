@@ -95,11 +95,22 @@ angular.module('app', [
 					{class: 'animate-fly-down'},
 					{class: 'animate-fly-left'},
 					{class: 'animate-fly-right'},
+					{class: 'animate-shake'},
 				],
 				reflow: [
 					{class: ''},
-					{class: 'animate-reflow-width'},
-					{class: 'animate-reflow-height'},
+					{
+						class: 'animate-reflow-width',
+						conflicts: [
+							{primary: 'animate-shake'},
+						],
+					},
+					{
+						class: 'animate-reflow-height',
+						conflicts: [
+							{primary: 'animate-shake'},
+						],
+					},
 					{
 						class: 'animate-reflow-scale',
 						conflicts: [
@@ -107,6 +118,7 @@ angular.module('app', [
 							{primary: 'animate-fly-down'},
 							{primary: 'animate-fly-left'},
 							{primary: 'animate-fly-right'},
+							{primary: 'animate-shake'},
 						],
 					},
 				],
