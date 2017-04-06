@@ -147,6 +147,26 @@ body.router-routing .animate {
 	animation-direction: reverse;
 }
 /* }}} */
+/* .animate-shake {{{ */
+/* Shamelessly copied from the excellent https://github.com/daneden/animate.css/blob/master/source/attention_seekers/shake.css */
+@keyframes animate-shake {
+	from, to {
+		transform: translate3d(0, 0, 0);
+	}
+
+	10%, 30%, 50%, 70%, 90% {
+		transform: translate3d(-10px, 0, 0);
+	}
+
+	20%, 40%, 60%, 80% {
+		transform: translate3d(10px, 0, 0);
+	}
+}
+
+.animate.animate-shake {
+	animation-name: animate-shake;
+}
+/* }}} */
 
 /* .animate-reflow-width {{{ */
 @keyframes animate-reflow-width {
