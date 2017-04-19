@@ -33,6 +33,14 @@
 						</div>
 					</div>
 					<div class="form-group">
+						<label class="col-sm-3 control-label">Delay</label>
+						<div class="col-sm-9">
+							<select ng-model="$ctrl.selected.delay" class="form-control">
+								<option ng-repeat="animation in $ctrl.animations.delay track by animation.class" value="{{animation.class}}">{{animation.class}}</option>
+							</select>
+						</div>
+					</div>
+					<div class="form-group">
 						<label class="col-sm-3 control-label">Easing</label>
 						<div class="col-sm-9">
 							<select ng-model="$ctrl.selected.easing" class="form-control">
