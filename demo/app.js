@@ -142,6 +142,15 @@ angular.module('app', [
 					{class: 'animate-easing-ease-out'},
 					{class: 'animate-easing-ease-in-out'},
 				],
+				repeat: [
+					{class: ''},
+					{class: 'animate-repeat-loop'},
+					{class: 'animate-repeat-1'},
+					{class: 'animate-repeat-2'},
+					{class: 'animate-repeat-3'},
+					{class: 'animate-repeat-4'},
+					{class: 'animate-repeat-5'},
+				],
 			};
 
 			// Deal with conflicts {{{
@@ -177,6 +186,7 @@ angular.module('app', [
 				reflowConflicts: false,
 				duration: '',
 				easing: '',
+				repeat: '',
 			};
 			$scope.$watch('$ctrl.selected', ()=> {
 				$ctrl.selected.class = [
@@ -185,6 +195,7 @@ angular.module('app', [
 					$ctrl.selected.reflow,
 					$ctrl.selected.duration,
 					$ctrl.selected.easing,
+					$ctrl.selected.repeat,
 				]
 					.filter(i => !!i)
 					.join(' ')

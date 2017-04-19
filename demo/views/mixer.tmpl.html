@@ -41,6 +41,14 @@
 						</div>
 					</div>
 					<div class="form-group">
+						<label class="col-sm-3 control-label">Repeat</label>
+						<div class="col-sm-9">
+							<select ng-model="$ctrl.selected.repeat" class="form-control">
+								<option ng-repeat="animation in $ctrl.animations.repeat track by animation.class" value="{{animation.class}}">{{animation.class}}</option>
+							</select>
+						</div>
+					</div>
+					<div class="form-group">
 						<label class="col-sm-3 control-label">HTML</label>
 						<div class="col-sm-9">
 							<pre>&lt;div class="{{$ctrl.selected.class}}"&gt;&lt;/div&gt;</pre>
