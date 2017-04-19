@@ -124,6 +124,11 @@ angular.module('app', [
 				],
 				duration: [
 					{class: ''},
+					{class: 'animate-duration-10ms'},
+					{class: 'animate-duration-20ms'},
+					{class: 'animate-duration-30ms'},
+					{class: 'animate-duration-40ms'},
+					{class: 'animate-duration-50ms'},
 					{class: 'animate-duration-100ms'},
 					{class: 'animate-duration-200ms'},
 					{class: 'animate-duration-500ms'},
@@ -133,6 +138,23 @@ angular.module('app', [
 					{class: 'animate-duration-10s'},
 					{class: 'animate-duration-20s'},
 					{class: 'animate-duration-30s'},
+				],
+				delay: [
+					{class: ''},
+					{class: 'animate-delay-10ms'},
+					{class: 'animate-delay-20ms'},
+					{class: 'animate-delay-30ms'},
+					{class: 'animate-delay-40ms'},
+					{class: 'animate-delay-50ms'},
+					{class: 'animate-delay-100ms'},
+					{class: 'animate-delay-200ms'},
+					{class: 'animate-delay-500ms'},
+					{class: 'animate-delay-1s'},
+					{class: 'animate-delay-2s'},
+					{class: 'animate-delay-5s'},
+					{class: 'animate-delay-10s'},
+					{class: 'animate-delay-20s'},
+					{class: 'animate-delay-30s'},
 				],
 				easing: [
 					{class: ''},
@@ -194,6 +216,7 @@ angular.module('app', [
 					$ctrl.selected.primary,
 					$ctrl.selected.reflow,
 					$ctrl.selected.duration,
+					$ctrl.selected.delay,
 					$ctrl.selected.easing,
 					$ctrl.selected.repeat,
 				]
@@ -202,6 +225,7 @@ angular.module('app', [
 			}, true);
 			// }}}
 
+			// Setup widgets to animate {{{
 			$ctrl.repeatItems = [];
 			$ctrl.showMode = 0;
 			$interval(function() {
@@ -216,6 +240,7 @@ angular.module('app', [
 
 				if (++$ctrl.showMode >= 3) $ctrl.showMode = 0;
 			}, 2000);
+			// }}}
 		},
 	})
 	// }}}

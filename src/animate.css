@@ -13,7 +13,13 @@ body.router-routing .animate {
 }
 /* }}} */
 
-/* .animate-*s - durations {{{ */
+/* .animate-duration-* - durations {{{ */
+.animate.animate-duration-0 { animation-duration: 0 }
+.animate.animate-duration-10ms { animation-duration: 0.01s }
+.animate.animate-duration-20ms { animation-duration: 0.02s }
+.animate.animate-duration-30ms { animation-duration: 0.03s }
+.animate.animate-duration-40ms { animation-duration: 0.04s }
+.animate.animate-duration-50ms { animation-duration: 0.05s }
 .animate.animate-duration-100ms { animation-duration: 0.1s }
 .animate.animate-duration-200ms { animation-duration: 0.2s }
 .animate.animate-duration-500ms { animation-duration: 0.5s }
@@ -31,13 +37,30 @@ body.router-routing .animate {
 .animate.animate-easing-ease-out { animation-timing-function: ease-out }
 .animate.animate-easing-ease-in-out { animation-timing-function: ease-in-out }
 /* }}} */
-/* animate-repeat-* - repeat/looping {{{ */
+/* .animate-repeat-* - repeat/looping {{{ */
 .animate.animate-repeat-1 { animation-iteration-count: 1 }
 .animate.animate-repeat-2 { animation-iteration-count: 2 }
 .animate.animate-repeat-3 { animation-iteration-count: 3 }
 .animate.animate-repeat-4 { animation-iteration-count: 4 }
 .animate.animate-repeat-5 { animation-iteration-count: 5 }
 .animate.animate-repeat-loop { animation-iteration-count: infinite }
+/* }}} */
+/* .animate-delay-* - delays {{{ */
+.animate.animate-delay-0ms { animation-delay: 0 }
+.animate.animate-delay-10ms { animation-delay: 0.01s }
+.animate.animate-delay-20ms { animation-delay: 0.02s }
+.animate.animate-delay-30ms { animation-delay: 0.03s }
+.animate.animate-delay-40ms { animation-delay: 0.04s }
+.animate.animate-delay-50ms { animation-delay: 0.05s }
+.animate.animate-delay-100ms { animation-delay: 0.1s }
+.animate.animate-delay-200ms { animation-delay: 0.2s }
+.animate.animate-delay-500ms { animation-delay: 0.5s }
+.animate.animate-delay-1s { animation-delay: 1s }
+.animate.animate-delay-2s { animation-delay: 2s }
+.animate.animate-delay-5s { animation-delay: 5s }
+.animate.animate-delay-10s { animation-delay: 10s }
+.animate.animate-delay-20s { animation-delay: 20s }
+.animate.animate-delay-30s { animation-delay: 30s }
 /* }}} */
 
 /* .animate-fade {{{ */

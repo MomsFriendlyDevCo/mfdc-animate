@@ -33,7 +33,8 @@ This library is intended to be separated into atomic CSS components. To use comb
 | Reflow              | `animate-reflow-width`  | Resize the elements width while animating                                                                          |
 |                     | `animate-reflow-height` | Resize the elements height while animating. This is ideal for vertical lists or use within tables                  |
 |                     | `animate-reflow-scale`  | Scale the entire element while animating. This class is recommended for reflow as it is GPU accelerated            |
-| Modifier / Duration | `animate-duration-TIME` | Modify the animation time. Time can be: `100ms`, `200ms`, `500ms` (default), `1s`, `2s`, `5s`, `10s`, `20s`, `30s` |
+| Modifier / Delay    | `animate-delay-TIME`    | Modify the animation start time. Time can be: `0ms` (default), `10ms`, `20ms`, `30ms`, `40ms`, `50ms`, `100ms`, `200ms`, `500ms`, `1s`, `2s`, `5s`, `10s`, `20s`, `30s` |
+| Modifier / Duration | `animate-duration-TIME` | Modify the animation time. Time can be: `10ms`, `20ms`, `30ms`, `40ms`, `50ms`, `100ms`, `200ms`, `500ms` (default), `1s`, `2s`, `5s`, `10s`, `20s`, `30s` |
 | Modifier / Easing   | `animate-easing-EASE`   | Modify the animation easing. Ease can be: `linear`, `ease`, `ease-in`, `ease-out` (default), `ease-in-out`         |
 | Modifier / Repeat   | `animate-repeat-REPEAT` | Modify how many times the animation will loop. Repeat can be: `loop`, `1` (default), `2`, `3`, `4`, `5`            |
 
